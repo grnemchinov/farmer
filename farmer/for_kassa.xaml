@@ -1,0 +1,51 @@
+﻿<Window x:Class="farmer.for_kassa"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:farmer"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Title="for_kassa" Height="450" Width="800">
+    <Grid>
+
+        <Image Source="/Image1.png" Stretch="Fill"/>
+        <DataGrid x:Name="farmdtg" HorizontalAlignment="Left" Width="378" FontFamily="Comic Sans MS" FontSize="12" Margin="0,78,0,78"/>
+        <DataGrid x:Name="farmdtg1" HorizontalAlignment="Left" Width="373" FontFamily="Comic Sans MS" FontSize="12" Margin="425,78,0,79"/>
+        <Button x:Name="plusbtn" Content="+" HorizontalAlignment="Left" Margin="383,138,0,0" VerticalAlignment="Top" Width="42"/>
+        <Button x:Name="minusbtn" Content="-" HorizontalAlignment="Left" Margin="383,275,0,0" VerticalAlignment="Top" Width="42"/>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="45*"/>
+                <RowDefinition Height="389*"/>
+                <RowDefinition Height="45*"/>
+                <RowDefinition Height="45*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="1.3*"/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="2" Grid.Row="3" Margin="0,3,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+            </Grid>
+            <Grid Grid.ColumnSpan="3" Grid.Row="3" Margin="0,3,0,0">
+                <Button x:Name="importbtn" Content="Загрузить и выгрузить чек" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" Margin="0 0 10 0" />
+            </Grid>
+            <Grid Grid.ColumnSpan="2" Grid.Row="0" Margin="0,3,0,0">
+                <Button x:Name="buybtn" Content="покупка" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" Margin="0 0 10 0" />
+            </Grid>
+            <Grid Grid.Column="2" Grid.Row="0" Margin="0,3,0,0">
+                <Button x:Name="checkbtn" Content="сохраненные чеки" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" Margin="0 0 10 0" />
+            </Grid>
+            <Grid Grid.Column="0" Grid.Row="2" Margin="0,3,0,0">
+                <TextBox x:Name="sumtbx" Width="200" VerticalAlignment="Stretch" TextWrapping="Wrap" HorizontalAlignment="Stretch"  materialDesign:HintAssist.Hint="Заплатили"/>
+            </Grid>
+
+        </Grid>
+    </Grid>
+</Window>
